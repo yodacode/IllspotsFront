@@ -6,6 +6,7 @@
   ],
   "description": "Menu vertical responsive",
   "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
