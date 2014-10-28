@@ -1,0 +1,19 @@
+{
+  "name": "Menu",
+  "version": "0.0.0",
+  "authors": [
+    "Benjamin de Vaublanc"
+  ],
+  "description": "Menu vertical responsive",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "js/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootswatch": "~3.2.0+4"
+  }
+}
