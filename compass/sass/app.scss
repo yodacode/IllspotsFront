@@ -29,6 +29,10 @@ body {
 	height: 66px;
 	line-height: 66px;  
 	background-color: $header-bg; 
+	z-index: 1000;
+
+	-webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 
 	a {
 		color: #FFF;	
@@ -41,6 +45,16 @@ body {
 		text-decoration: none;
 		color: $green;
 	}
+
+}
+
+.header.sticky {
+	font-size: 24px;
+    line-height: 48px;
+	height: 48px; 
+    background: #efc47D;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .header-logo {
@@ -48,6 +62,7 @@ body {
 	text-indent: -9999px;
 	float: left;
 	background-image: image-url("illspots-logo.png");
+	background-color: $green;
 	background-size: 40px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -55,11 +70,19 @@ body {
 	width: 70px;
 }
 
+.header-search {
+	float: right;
+	margin-left: 45px;
+	padding: 0px 15px;
+	background-color: darken($header-bg, 5%);
+}
+
 /*-------------------------------------------*\
 	$MENU
 /*-------------------------------------------*/
 .menu {
 	float: left;
+	margin-right: 15px;
 	a {
 		display: inline-block;
 		margin: 0 10px;	
@@ -69,6 +92,7 @@ body {
 a.menu-profil {
 	display: none;
 }
+
 
 /*-------------------------------------------*\
   $RESPONSIVE
