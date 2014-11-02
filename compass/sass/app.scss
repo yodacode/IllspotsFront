@@ -4,7 +4,7 @@
 	$VARIABLE
 /*-------------------------------------------*/
 $header-bg:#2c3e50; 
-$grey: #909090;
+$grey: #C5C5C5;
 $grey-light: #E8E8E8;
 $green: #18bc9c;
 $menu-width:230px!default; 
@@ -276,7 +276,7 @@ a.menu-profil {
 	a.active,
 	a:hover {
 		color: #494949;
-		background-color: $grey;
+		background-color: $grey-light;
 	}
 }
 
@@ -284,7 +284,7 @@ a.menu-profil {
 		min-height: 60px;		
 		overflow: hidden;
 		display: block;
-		background-color: $grey;
+		background-color: $grey-light;
 				
 		img {
 			width: 40px;
@@ -292,7 +292,7 @@ a.menu-profil {
 			margin: 10px 5px;
 		}
 		span {
-			width: 165px;
+			width: 125px;
 			font-size: 12px;
 			margin: 10px 0px 5px 0px;
 		}

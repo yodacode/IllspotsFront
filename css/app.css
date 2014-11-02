@@ -6,7 +6,7 @@
 /*-------------------------------------------*/
 /* line 16, ../compass/sass/app.scss */
 body {
-  background-color: #909090;
+  background-color: #C5C5C5;
 }
 
 /* line 19, ../compass/sass/app.scss */
@@ -148,7 +148,7 @@ a.menu-profil {
   right: 5px;
   top: 5px;
   font-size: 0.8em;
-  color: #909090;
+  color: #C5C5C5;
 }
 
 /* line 144, ../compass/sass/app.scss */
@@ -159,7 +159,7 @@ a.menu-profil {
 /* line 148, ../compass/sass/app.scss */
 .post-subtitle {
   font-size: 0.8em;
-  color: #909090;
+  color: #C5C5C5;
 }
 
 /* line 153, ../compass/sass/app.scss */
@@ -320,7 +320,7 @@ a.menu-profil {
   .menu a.active,
   .menu a:hover {
     color: #494949;
-    background-color: #909090;
+    background-color: #E8E8E8;
   }
 
   /* line 283, ../compass/sass/app.scss */
@@ -328,7 +328,7 @@ a.menu-profil {
     min-height: 60px;
     overflow: hidden;
     display: block;
-    background-color: #909090;
+    background-color: #E8E8E8;
   }
   /* line 289, ../compass/sass/app.scss */
   .menu-profil img {
@@ -338,7 +338,7 @@ a.menu-profil {
   }
   /* line 294, ../compass/sass/app.scss */
   .menu-profil span {
-    width: 165px;
+    width: 125px;
     font-size: 12px;
     margin: 10px 0px 5px 0px;
   }
