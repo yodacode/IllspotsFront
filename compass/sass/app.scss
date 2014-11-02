@@ -4,7 +4,8 @@
 	$VARIABLE
 /*-------------------------------------------*/
 $header-bg:#2c3e50; 
-$grey: #eaf1f1;
+$grey: #909090;
+$grey-light: #E8E8E8;
 $green: #18bc9c;
 $menu-width:230px!default; 
 
@@ -17,6 +18,13 @@ body {
 }
 .app-content {
 	padding-top: 66px;
+}
+.no-padding {
+	padding: 0 0 0 0;
+}
+
+.rate {
+	font-size: 0.8em;
 }
 
 /*-------------------------------------------*\
@@ -35,10 +43,7 @@ body {
     transition: all 0.4s ease;
 
 	a {
-		color: #FFF;	
-		span {
-			margin-right: 5px;
-		}
+		color: #FFF;		
 	}
 	a:hover,
 	a.active {
@@ -70,11 +75,26 @@ body {
 	width: 70px;
 }
 
-.header-search {
+.header-action {
+	display: inline-block;
 	float: right;
-	margin-left: 45px;
+	margin-left: 2px;
+	height: 100%;
 	padding: 0px 15px;
 	background-color: darken($header-bg, 5%);
+	span {
+		vertical-align: middle;
+		line-height: inherit;
+		margin: 0px 5px;	
+	}
+}
+
+.red {
+	background: #F0F;
+}
+
+.blue {
+	background: #F00;
 }
 
 /*-------------------------------------------*\
@@ -82,7 +102,6 @@ body {
 /*-------------------------------------------*/
 .menu {
 	float: left;
-	margin-right: 15px;
 	a {
 		display: inline-block;
 		margin: 0 10px;	
@@ -93,11 +112,76 @@ a.menu-profil {
 	display: none;
 }
 
+/*-------------------------------------------*\
+	$POST
+/*-------------------------------------------*/
+.post {
+	background-color: #FFF;
+	margin-top: 3px;
+	padding-top: 5px;
+	position: relative;	
+}
+
+	.post-avatar {
+		width: 100%;	
+		max-width: 80px;
+		margin-top: 7px;
+	}
+
+	.post-author {
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+	.post-date {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		font-size: 0.8em;
+		color: $grey;
+	}
+
+	.post-descr {
+		font-size: 0.8em;
+	}
+
+	.post-subtitle {
+		font-size: 0.8em;
+		color: $grey;
+	}
+
+	.post-foot {
+		background-color: $grey-light;
+		margin-top: 7px;
+	}
+
+		.post-foot-btn {
+			text-align: center;
+			color: #FFF;
+			display: inline-block;
+			padding: 4px 0px;
+			border-right: solid 1px $grey-light;
+			border-left: solid 1px $grey-light;
+			background-color: $green;
+		}
+
+		.post-foot-link {
+			font-size: 0.7em;
+			margin-right: 12px;
+		}
+
 
 /*-------------------------------------------*\
   $RESPONSIVE
 /*-------------------------------------------*/
 @media only screen and (max-width: 750px) { 
+
+/*-----------------------*\
+  $global
+/*-----------------------*/	
+.app {
+
+}
 	.app-container,
 	.app-pusher { 		
 		height: 100%;
@@ -116,15 +200,31 @@ a.menu-profil {
 		bottom: 0;
 		padding-top: 0;
 		overflow-y: scroll;
+		width: 100%;
 		-webkit-overflow-scrolling:touch;
 	}
-	.header {
-		position: static;
+	.with-sidebar {
+		.app-pusher { @include transform(translateX($menu-width * -1)); }
+		.app-cache {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.6);
+		}
 	}
+/*-----------------------*\
+  $header
+/*-----------------------*/	
+.header {
+	position: static;
+}
 	.header-icon {
 		position: relative;
 		display: block;
-		float: left;
+		float: right;
 		width: 50px;
 		height: 65px;
 		cursor: pointer; 		
@@ -144,37 +244,43 @@ a.menu-profil {
 		background-size: 33px;
 	}
 
-	.menu {
-		position: absolute;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		background-color: #FFF;
-		width: $menu-width;
-		
-		@include transform(translateX($menu-width * -1));
-		a {
-			color: #494949;
-			display: block;
-			height: 40px;
-			text-indent: 5px;
-			line-height: 40px;
-			margin: 0;
-			border-bottom: solid 1px #E2E2E2;
-		}
-		a {
-			span {
-				margin-right: 34px;
-			}
-		}
-		a.active,
-		a:hover {
-			color: #494949;
-			background-color: $grey;
+	.header-action-label {
+		display: none;
+	}
+/*-----------------------*\
+  $menu
+/*-----------------------*/	
+.menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #FFF;
+	width: $menu-width;
+	
+	@include transform(translateX($menu-width));
+	a {
+		color: #494949;
+		display: block;
+		height: 40px;
+		text-indent: 5px;
+		line-height: 40px;
+		margin: 0;
+		border-bottom: solid 1px #E2E2E2;
+	}
+	a {
+		span {
+			margin-right: 34px;
 		}
 	}
+	a.active,
+	a:hover {
+		color: #494949;
+		background-color: $grey;
+	}
+}
 
-	a.menu-profil {
+	.menu-profil {
 		min-height: 60px;		
 		overflow: hidden;
 		display: block;
@@ -196,18 +302,5 @@ a.menu-profil {
 		float: left;
 		font-weight: bold;
 		display: inline;
-	}
-
-	.with-sidebar {
-		.app-pusher { @include transform(translateX($menu-width)); }
-		.app-cache {
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0,0,0,0.6);
-		}
-	}
+	}	
 }
