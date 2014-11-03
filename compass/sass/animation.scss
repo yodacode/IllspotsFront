@@ -1,0 +1,30 @@
+@import "compass/css3/animation";
+.ng-enter, .ng-leave {
+	@include animation-duration(1s);
+	@include animation-fill-mode(both);
+}
+
+.right.ng-enter {
+	@include animation-name(fadeInRight);
+}
+
+.right.ng-leave {
+	@include animation-name(fadeOutLeft);	
+}
+
+.left.ng-enter {
+	@include animation-name(fadeInLeft);
+}
+
+.left.ng-leave {
+	@include animation-name(fadeOutRight);	
+}
+
+.bouncer.ng-enter {
+	@include animation-name(fadeIn);
+}
+
+.bouncer.ng-leave {
+	@include animation-name(fadeOut);
+}
+

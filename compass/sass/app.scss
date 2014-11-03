@@ -3,18 +3,20 @@
 /*-------------------------------------------*\
 	$VARIABLE
 /*-------------------------------------------*/
-$header-bg:#2c3e50; 
+$header-bg:#2c3e50;
+$header-height:65px;
+
 $grey: #C5C5C5;
 $grey-light: #E8E8E8;
 $green: #18bc9c;
-$menu-width:230px!default; 
+$menu-width:230px!default;
 
 /*-------------------------------------------*\
 	$GLOBAL
 /*-------------------------------------------*/
 
 body {
-	background-color: $grey;
+	background-color: #444444;
 }
 .app-content {
 	padding-top: 66px;
@@ -35,15 +37,15 @@ body {
 	left: 0;
 	right: 0;
 	height: 66px;
-	line-height: 66px;  
-	background-color: $header-bg; 
+	line-height: 66px;
+	background-color: $header-bg;
 	z-index: 1000;
 
 	-webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 
 	a {
-		color: #FFF;		
+		color: #FFF;
 	}
 	a:hover,
 	a.active {
@@ -56,7 +58,7 @@ body {
 .header.sticky {
 	font-size: 24px;
     line-height: 48px;
-	height: 48px; 
+	height: 48px;
     background: #efc47D;
     text-align: left;
     padding-left: 20px;
@@ -75,6 +77,13 @@ body {
 	width: 70px;
 }
 
+.header-back {
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	display: none;
+}
+
 .header-action {
 	display: inline-block;
 	float: right;
@@ -85,7 +94,7 @@ body {
 	span {
 		vertical-align: middle;
 		line-height: inherit;
-		margin: 0px 5px;	
+		margin: 0px 5px;
 	}
 }
 
@@ -104,7 +113,7 @@ body {
 	float: left;
 	a {
 		display: inline-block;
-		margin: 0 10px;	
+		margin: 0 10px;
 	}
 }
 
@@ -113,17 +122,26 @@ a.menu-profil {
 }
 
 /*-------------------------------------------*\
+	$VIEW
+/*-------------------------------------------*/
+.view {
+	overflow:hidden;
+	position:absolute;
+	top: $header-height;
+	width:100%
+}
+
+/*-------------------------------------------*\
 	$POST
 /*-------------------------------------------*/
 .post {
 	background-color: #FFF;
-	margin-top: 3px;
-	padding-top: 5px;
-	position: relative;	
+	padding-top: 10px;
+	position: relative;
 }
 
 	.post-avatar {
-		width: 100%;	
+		width: 100%;
 		max-width: 80px;
 		margin-top: 7px;
 	}
@@ -162,34 +180,41 @@ a.menu-profil {
 			padding: 4px 0px;
 			border-right: solid 1px $grey-light;
 			border-left: solid 1px $grey-light;
+			background-color: $grey;
+		}
+
+		.post-foot-btn.active {
+
+			color: #FFF;
 			background-color: $green;
 		}
 
 		.post-foot-link {
 			font-size: 0.7em;
 			margin-right: 12px;
+			display: inline-block;
 		}
 
 
 /*-------------------------------------------*\
   $RESPONSIVE
 /*-------------------------------------------*/
-@media only screen and (max-width: 750px) { 
+@media only screen and (max-width: 750px) {
 
 /*-----------------------*\
   $global
-/*-----------------------*/	
+/*-----------------------*/
 .app {
 
 }
 	.app-container,
-	.app-pusher { 		
+	.app-pusher {
 		height: 100%;
 	}
 	.app-container {
 		overflow: hidden;
 	}
-	.app-pusher {		
+	.app-pusher {
 		@include transition-duration(0.3s);
 		@include transform(translateX(0px));
 	}
@@ -217,17 +242,18 @@ a.menu-profil {
 	}
 /*-----------------------*\
   $header
-/*-----------------------*/	
+/*-----------------------*/
 .header {
 	position: static;
+	height: $header-height;
 }
 	.header-icon {
 		position: relative;
 		display: block;
 		float: right;
 		width: 50px;
-		height: 65px;
-		cursor: pointer; 		
+		height: $header-height;
+		cursor: pointer;
 
 		&:after {
 			content: '';
@@ -247,9 +273,12 @@ a.menu-profil {
 	.header-action-label {
 		display: none;
 	}
+	.header-back {
+		display: block;
+	}
 /*-----------------------*\
   $menu
-/*-----------------------*/	
+/*-----------------------*/
 .menu {
 	position: absolute;
 	right: 0;
@@ -257,7 +286,7 @@ a.menu-profil {
 	bottom: 0;
 	background-color: #FFF;
 	width: $menu-width;
-	
+
 	@include transform(translateX($menu-width));
 	a {
 		color: #494949;
@@ -281,11 +310,11 @@ a.menu-profil {
 }
 
 	.menu-profil {
-		min-height: 60px;		
+		min-height: 60px;
 		overflow: hidden;
 		display: block;
 		background-color: $grey-light;
-				
+
 		img {
 			width: 40px;
 			float: left;
@@ -298,9 +327,21 @@ a.menu-profil {
 		}
 	}
 
-	.menu-profil-name {		
+	.menu-profil-name {
 		float: left;
 		font-weight: bold;
 		display: inline;
-	}	
+	}
+
+
+/*-----------------------*\
+  $view
+/*-----------------------*/
+.view {
+	top: 0;
 }
+
+
+}
+
+
