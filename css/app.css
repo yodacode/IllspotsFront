@@ -191,7 +191,7 @@ a.menu-profil {
   text-align: center;
   color: #FFF;
   display: inline-block;
-  padding: 4px 0px;
+  padding: 10px 0px;
   border-right: solid 1px #E8E8E8;
   border-left: solid 1px #E8E8E8;
   background-color: #C5C5C5;
@@ -203,10 +203,11 @@ a.menu-profil {
   background-color: #18bc9c;
 }
 
-/* line 192, ../compass/sass/app.scss */
+/* line 191, ../compass/sass/app.scss */
 .post-foot-link {
-  font-size: 0.7em;
-  margin-right: 12px;
+  font-size: 0.8em;
+  margin-right: 5px;
+  margin-top: 10px;
   display: inline-block;
 }
 
