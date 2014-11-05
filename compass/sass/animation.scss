@@ -1,6 +1,6 @@
 @import "compass/css3/animation";
 .ng-enter, .ng-leave {
-	@include animation-duration(1s);
+	@include animation-duration(0.5s);
 	@include animation-fill-mode(both);
 }
 

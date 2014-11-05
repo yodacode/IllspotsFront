@@ -4,11 +4,12 @@
 	$VARIABLE
 /*-------------------------------------------*/
 $header-bg:#2c3e50;
-$header-height:65px;
+$header-height:45px;
 
 $grey: #C5C5C5;
 $grey-light: #E8E8E8;
 $green: #18bc9c;
+$red: #F46E6E;
 $menu-width:230px!default;
 
 /*-------------------------------------------*\
@@ -29,6 +30,10 @@ body {
 	font-size: 0.8em;
 }
 
+.regular-border {
+	border-radius: 0px;
+}
+
 /*-------------------------------------------*\
 	$HEADER
 /*-------------------------------------------*/
@@ -36,8 +41,8 @@ body {
 	position: fixed;
 	left: 0;
 	right: 0;
-	height: 66px;
-	line-height: 66px;
+	height: $header-height;
+	line-height: $header-height;
 	background-color: $header-bg;
 	z-index: 1000;
 
@@ -89,7 +94,7 @@ body {
 	float: right;
 	margin-left: 2px;
 	height: 100%;
-	padding: 0px 15px;
+	padding: 0px 7px;
 	background-color: darken($header-bg, 5%);
 	span {
 		vertical-align: middle;
@@ -138,12 +143,17 @@ a.menu-profil {
 	background-color: #FFF;
 	padding-top: 10px;
 	position: relative;
+
+	.panel-body {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
 
 	.post-avatar {
 		width: 100%;
 		max-width: 80px;
-		margin-top: 7px;
+		margin-left: 7px;
 	}
 
 	.post-author {
@@ -151,6 +161,7 @@ a.menu-profil {
 		font-size: 1em;
 	}
 
+	.post-distance,
 	.post-date {
 		position: absolute;
 		right: 5px;
@@ -171,6 +182,7 @@ a.menu-profil {
 	.post-foot {
 		background-color: $grey-light;
 		margin-top: 7px;
+		padding: 0;
 	}
 
 		.post-foot-btn {
@@ -188,11 +200,15 @@ a.menu-profil {
 			background-color: $green;
 		}
 
+		.post-foot-btn.active.red {
+			background-color: $red;
+		}
+
 		.post-foot-link {
 			font-size: 0.8em;
 			margin-right: 5px;
 			margin-top: 10px;
-			display: inline-block;			
+			display: inline-block;
 		}
 
 
@@ -220,7 +236,7 @@ a.menu-profil {
 	}
 	.app-content {
 		position: absolute;
-		top: 66px;
+		top: $header-height;
 		left: 0;
 		bottom: 0;
 		padding-top: 0;
@@ -262,8 +278,8 @@ a.menu-profil {
 			width: 16px;
 			height: 0;
 			top: 15px;
-			left: 15px;
-			@include box-shadow(0 10px 0 1px #FFF, 0 16px 0 1px #FFF, 0 22px 0 1px #FFF);
+			left: 17px;
+			@include box-shadow(0 0px 0 1px #FFF, 0 6px 0 1px #FFF, 0 12px 0 1px #FFF);
 		}
 	}
 	.header-logo {

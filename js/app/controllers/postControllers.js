@@ -21,7 +21,8 @@ postControllers.controller('PostListCtrl', ['$scope', function ($scope) {
             },
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...',
             counterComments: 4,
-            counterLikes: 1
+            counterLikes: 1,
+            liked: true
 
         },
         {
@@ -42,86 +43,7 @@ postControllers.controller('PostListCtrl', ['$scope', function ($scope) {
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...',
             counterComments: 4,
             counterLikes: 1,
-        },
-        {
-            id: 3,
-            author: {
-                id: 4,
-                name: 'Jonathan Jourde',
-                picture: 'profil.png'
-            },
-            date: '04/11/2014',
-            place: {
-                id: 5,
-                name: 'Flesh and Bones',
-                rate: 1,
-                distance: 10,
-                city: 'Paris'
-            },
-            description: 'hey! Dude !!',
-            counterComments: 1,
-            counterLikes: 12
-
-        },
-        {
-            id: 3,
-            author: {
-                id: 4,
-                name: 'Jonathan Jourde',
-                picture: 'profil.png'
-            },
-            date: '04/11/2014',
-            place: {
-                id: 5,
-                name: 'Flesh and Bones',
-                rate: 1,
-                distance: 10,
-                city: 'Paris'
-            },
-            description: 'hey! Dude !!',
-            counterComments: 1,
-            counterLikes: 12
-
-        },
-        {
-            id: 3,
-            author: {
-                id: 4,
-                name: 'Jonathan Jourde',
-                picture: 'profil.png'
-            },
-            date: '04/11/2014',
-            place: {
-                id: 5,
-                name: 'Flesh and Bones',
-                rate: 1,
-                distance: 10,
-                city: 'Paris'
-            },
-            description: 'hey! Dude !!',
-            counterComments: 1,
-            counterLikes: 12
-
-        },
-        {
-            id: 3,
-            author: {
-                id: 4,
-                name: 'Jonathan Jourde',
-                picture: 'profil.png'
-            },
-            date: '04/11/2014',
-            place: {
-                id: 5,
-                name: 'Flesh and Bones',
-                rate: 1,
-                distance: 10,
-                city: 'Paris'
-            },
-            description: 'hey! Dude !!',
-            counterComments: 1,
-            counterLikes: 12
-
+            liked: false
         }
     ];
 
