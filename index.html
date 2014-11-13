@@ -67,14 +67,19 @@
 						Messages
 					</a>
 				</nav>
-				<a href="/#/search" class="header-action">
+				<a href="/#/search" class="header-action" ng-if="url == '#/'">
 					<span class="header-action-label">Rechercher</span>
 					<span class="glyphicon glyphicon-search"></span>
 				</a>
-				<a href="" class="header-action">
+				<a href="" class="header-action" ng-if="url == '#/'">
 					<span class="header-action-label">Ajouter</span>
 					<span class="glyphicon glyphicon-plus"></span>
 				</a>
+				<a href="/#/search" class="header-action" ng-if="url == '#/search/'">
+					<span class="header-action-label">Map</span>
+					<span class="glyphicon glyphicon-map-marker"></span>
+				</a>
+
 			</header>
 			<div class="app-content">
 				<div class="view {{ui.direction}}" ng-view></div>
