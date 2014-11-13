@@ -13,7 +13,11 @@ IllspotsApp.config(['$routeProvider',
 			controller: 'PostListCtrl'
 		})
 		.when('/search/', {
-        	templateUrl: 'js/app/partials/search-list.html',
+        	templateUrl: 'js/app/partials/place-list.html',
+        	// controller: 'PlaceListCtrl'
+      	})
+      	.when('/spot/', {
+        	templateUrl: 'js/app/partials/place-detail.html',
         	// controller: 'PlaceListCtrl'
       	})
       	.when('/contact', {
@@ -28,17 +32,13 @@ IllspotsApp.config(['$routeProvider',
 
 IllspotsApp.controller('AppCtrl', ['$scope', '$timeout', '$window', function ($scope, $timeout, $window) {
 
-	$scope.isPhone = function () {
-		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); 
-	}
-	
 	$scope.ui = {
 		direction: 'right'
 	};
 
-	$scope.$on('$routeChangeSuccess', function (event, next, current) { 
-   		
-   		if ($window.location.hash == '#/') {   			
+	$scope.$on('$routeChangeSuccess', function (event, next, current) {
+
+   		if ($window.location.hash == '#/') {
    			$scope.ui.direction = 'right';
 			$scope.ui.back = false;
 		} else {

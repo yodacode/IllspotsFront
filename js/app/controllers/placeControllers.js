@@ -30,3 +30,11 @@ placeControllers.controller('PlaceListCtrl', ['$scope', function ($scope) {
     console.log('PlaceListCtrl');
 
 }]);
+
+
+placeControllers.controller('PlaceDetailCtrl', ['$scope', function ($scope) {
+
+	$scope.place = [];
+    console.log('PlaceDetailCtrl');
+
+}]);

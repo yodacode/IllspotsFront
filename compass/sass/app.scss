@@ -6,6 +6,7 @@
 $header-bg:#2c3e50;
 $header-height:45px;
 
+$blue:#2c3e50;
 $grey: #C5C5C5;
 $grey-light: #E8E8E8;
 $green: #18bc9c;
@@ -143,6 +144,10 @@ a.menu-profil {
 	background-color: #FFF;
 	padding-top: 10px;
 	position: relative;
+
+	a {
+		color: $blue;
+	}
 
 	.panel-body {
 		padding-top: 0;
