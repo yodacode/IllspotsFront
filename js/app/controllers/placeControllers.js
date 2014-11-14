@@ -1,7 +1,12 @@
 var placeControllers = angular.module('placeControllers', []);
 
 
-placeControllers.controller('PlaceListCtrl', ['$scope', function ($scope) {
+placeControllers.controller('PlaceListCtrl', ['$scope', 'Menu', function ($scope, Menu) {
+
+	// change Menu
+	Menu.setText('Map');
+	Menu.setIcon('glyphicon glyphicon-map-marker');
+	Menu.setUrl('#/spot/');
 
 	$scope.places = [
 	    {
@@ -27,7 +32,7 @@ placeControllers.controller('PlaceListCtrl', ['$scope', function ($scope) {
 	        checked: true
 	    }
 	];
-    console.log('PlaceListCtrl');
+
 
 }]);
 

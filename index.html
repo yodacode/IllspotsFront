@@ -16,6 +16,8 @@
 	<script src="js/libs/angularjs/angular.js"></script>
 	<script src="js/libs/angular-animate/angular-animate.js"></script>
   	<script src="js/libs/angular-route/angular-route.js"></script>
+	<!-- services -->
+  	<script src="js/app/services/menuServices.js"></script>
 	<!-- controllers -->
   	<script src="js/app/controllers/postControllers.js"></script>
   	<script src="js/app/controllers/placeControllers.js"></script>
@@ -67,21 +69,15 @@
 						Messages
 					</a>
 				</nav>
-				<a href="/#/search" class="header-action" ng-if="url == '#/'">
-					<span class="header-action-label">Rechercher</span>
-					<span class="glyphicon glyphicon-search"></span>
-				</a>
-				<a href="" class="header-action" ng-if="url == '#/'">
-					<span class="header-action-label">Ajouter</span>
-					<span class="glyphicon glyphicon-plus"></span>
-				</a>
-				<a href="/#/search" class="header-action" ng-if="url == '#/search/'">
-					<span class="header-action-label">Map</span>
-					<span class="glyphicon glyphicon-map-marker"></span>
+
+				<a href="{{ Menu.getUrl() }}" class="header-action">
+					<span class="header-action-label">{{ Menu.getText() }}</span>
+					<span class="{{ Menu.getIcon() }}"></span>
 				</a>
 
 			</header>
 			<div class="app-content">
+
 				<div class="view {{ui.direction}}" ng-view></div>
 			</div>
 

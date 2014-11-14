@@ -1,7 +1,12 @@
 var postControllers = angular.module('postControllers', []);
 
 
-postControllers.controller('PostListCtrl', ['$scope', function ($scope) {
+postControllers.controller('PostListCtrl', ['$scope', 'Menu', function ($scope, Menu) {
+
+    // Change menu
+    Menu.setText('Rechercher');
+    Menu.setIcon('glyphicon glyphicon-search');
+    Menu.setUrl('/#/search');
 
     $scope.posts = [
         {

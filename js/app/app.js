@@ -2,7 +2,8 @@ var IllspotsApp = angular.module('IllspotsApp', [
 	'ngRoute',
 	'IllspotsAnimations',
 	'postControllers',
-	'placeControllers'
+	'placeControllers',
+	'menuServices'
 ]);
 
 IllspotsApp.config(['$routeProvider',
@@ -30,21 +31,15 @@ IllspotsApp.config(['$routeProvider',
 }]);
 
 
-IllspotsApp.controller('AppCtrl', ['$scope', '$timeout', '$window', function ($scope, $timeout, $window) {
+IllspotsApp.controller('AppCtrl', ['$scope', '$window', 'Menu', function ($scope, $window, Menu) {
+
+	$scope.Menu = Menu;
 
 	$scope.ui = {
 		direction: 'right'
 	};
 
-	$scope.hideMenuItem = function () {
-		$scope.hidden = true;		
-	};
-
 	$scope.$on('$routeChangeSuccess', function (event, next, current) {
-
-		$scope.url = $window.location.hash;
-		$scope.hidden = false;
-		console.log($scope.url);
 
    		if ($window.location.hash == '#/') {
    			$scope.ui.direction = 'right';
