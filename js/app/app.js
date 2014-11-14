@@ -31,26 +31,30 @@ IllspotsApp.config(['$routeProvider',
 }]);
 
 
-IllspotsApp.controller('AppCtrl', ['$scope', '$window', 'Menu', function ($scope, $window, Menu) {
+IllspotsApp.controller('AppCtrl', ['$rootScope', '$scope', '$window', 'Menu', function ($rootScope, $scope, $window, Menu) {
 
 	$scope.Menu = Menu;
 
-	$scope.ui = {
-		direction: 'right'
-	};
-
-	$scope.$on('$routeChangeSuccess', function (event, next, current) {
+    $rootScope.slide = '';
+    $rootScope.$on('$routeChangeStart', function() {
 
    		if ($window.location.hash == '#/') {
-   			$scope.ui.direction = 'right';
-			$scope.ui.back = false;
+			$rootScope.btnBack = false;
 		} else {
-			$scope.ui.back = true;
+			$rootScope.btnBack = true;
 		}
 
-   		$scope.back = function () {
-   			$scope.ui.direction = 'left';
-   			$window.history.back();
-   		}
- 	});
+        //event button to move backward
+        $rootScope.back = function() {
+            $rootScope.slide = 'left';
+            $window.history.back();
+        }
+        //event button item list to move forward
+        $rootScope.next = function() {
+            $rootScope.slide = 'right';
+        }
+	});
+
+
+
 }]);

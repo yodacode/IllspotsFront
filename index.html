@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	<link rel="stylesheet" type="text/css" href="js/libs/bootswatch/flatly/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="css/fontello.css">
     <!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
 
@@ -38,8 +39,8 @@
 		<div class="app-pusher">
 			<header class="header">
 				<a href="#" class="header-icon" id="header-icon"></a>
-				<a href="/#/" ng-if="!ui.back" class="header-logo right">Logo</a>
-				<a ng-click="back()" ng-if="ui.back" class="header-back bouncer">
+				<a href="/#/" ng-if="!btnBack" class="header-logo left">Logo</a>
+				<a ng-click="back()" ng-if="btnBack" class="header-back bouncer">
 					<span class="glyphicon glyphicon-chevron-left"></span>
 					Back
 				</a>
@@ -70,7 +71,7 @@
 					</a>
 				</nav>
 
-				<a href="{{ Menu.getUrl() }}" class="header-action">
+				<a href="{{ Menu.getUrl() }}" class="header-action" ng-click="next()">
 					<span class="header-action-label">{{ Menu.getText() }}</span>
 					<span class="{{ Menu.getIcon() }}"></span>
 				</a>
@@ -78,7 +79,7 @@
 			</header>
 			<div class="app-content">
 
-				<div class="view {{ui.direction}}" ng-view></div>
+				<div class="view {{slide}}" ng-view></div>
 			</div>
 
 			<div class="app-cache" id="app-cache">
