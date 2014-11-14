@@ -36,12 +36,13 @@ IllspotsApp.controller('AppCtrl', ['$rootScope', '$scope', '$window', 'Menu', fu
 	$scope.Menu = Menu;
 
     $rootScope.slide = '';
-    $rootScope.$on('$routeChangeStart', function() {
-   	if ($window.location.hash == '#/') {
-			$rootScope.btnBack = false;
-		} else {
-			$rootScope.btnBack = true;
-		}
+    $rootScope.$on('$routeChangeSuccess', function() {
+
+    if ($window.location.hash == '#/' || $window.location.hash == '') {
+	   $rootScope.btnBack = false;
+	} else {
+		$rootScope.btnBack = true;
+	}
 
         //event button to move backward
         $rootScope.back = function() {

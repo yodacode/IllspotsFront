@@ -79,7 +79,8 @@ body {
 	font-weight: bold;
 	text-indent: -9999px;
 	float: left;
-	background-image: image-url("illspots-logo.png");
+	/*background-image: image-url("illspots-logo.png");*/
+	background-image: url(../img/illspots-logo.png);
 	background-color: $green;
 	background-size: 40px;
 	background-repeat: no-repeat;

@@ -6,7 +6,7 @@ postControllers.controller('PostListCtrl', ['$scope', 'Menu', function ($scope, 
     // Change menu
     Menu.setText('Rechercher');
     Menu.setIcon('glyphicon glyphicon-search');
-    Menu.setUrl('/#/search');
+    Menu.setUrl('#/search/');
 
     $scope.posts = [
         {
