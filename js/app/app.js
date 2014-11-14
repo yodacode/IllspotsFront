@@ -37,8 +37,7 @@ IllspotsApp.controller('AppCtrl', ['$rootScope', '$scope', '$window', 'Menu', fu
 
     $rootScope.slide = '';
     $rootScope.$on('$routeChangeStart', function() {
-
-   		if ($window.location.hash == '#/') {
+   	if ($window.location.hash == '#/') {
 			$rootScope.btnBack = false;
 		} else {
 			$rootScope.btnBack = true;
@@ -54,7 +53,5 @@ IllspotsApp.controller('AppCtrl', ['$rootScope', '$scope', '$window', 'Menu', fu
             $rootScope.slide = 'right';
         }
 	});
-
-
 
 }]);

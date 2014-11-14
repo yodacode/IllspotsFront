@@ -6,7 +6,7 @@
 /*-------------------------------------------*/
 /* line 20, ../compass/sass/app.scss */
 body {
-  background-color: #444444;
+  background-color: #D7D7D7;
 }
 
 /* line 23, ../compass/sass/app.scss */
@@ -29,10 +29,16 @@ body {
   border-radius: 0px;
 }
 
+/* line 38, ../compass/sass/app.scss */
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /*-------------------------------------------*\
 	$HEADER
 /*-------------------------------------------*/
-/* line 41, ../compass/sass/app.scss */
+/* line 46, ../compass/sass/app.scss */
 .header {
   position: fixed;
   left: 0;
@@ -44,18 +50,18 @@ body {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 53, ../compass/sass/app.scss */
+/* line 58, ../compass/sass/app.scss */
 .header a {
   color: #FFF;
 }
-/* line 56, ../compass/sass/app.scss */
+/* line 61, ../compass/sass/app.scss */
 .header a:hover,
 .header a.active {
   text-decoration: none;
   color: #18bc9c;
 }
 
-/* line 64, ../compass/sass/app.scss */
+/* line 69, ../compass/sass/app.scss */
 .header.sticky {
   font-size: 24px;
   line-height: 48px;
@@ -65,12 +71,12 @@ body {
   padding-left: 20px;
 }
 
-/* line 73, ../compass/sass/app.scss */
+/* line 78, ../compass/sass/app.scss */
 .header-logo {
   font-weight: bold;
   text-indent: -9999px;
   float: left;
-  background-image: url('/../img/illspots-logo.png?1414707463');
+  background-image: url('/../img/illspots-logo.png?1414666268');
   background-color: #18bc9c;
   background-size: 40px;
   background-repeat: no-repeat;
@@ -79,7 +85,7 @@ body {
   width: 70px;
 }
 
-/* line 86, ../compass/sass/app.scss */
+/* line 91, ../compass/sass/app.scss */
 .header-back {
   position: absolute;
   top: 0px;
@@ -87,7 +93,7 @@ body {
   display: none;
 }
 
-/* line 93, ../compass/sass/app.scss */
+/* line 98, ../compass/sass/app.scss */
 .header-action {
   display: inline-block;
   float: right;
@@ -96,37 +102,27 @@ body {
   padding: 0px 7px;
   background-color: #233140;
 }
-/* line 100, ../compass/sass/app.scss */
+/* line 105, ../compass/sass/app.scss */
 .header-action span {
   vertical-align: middle;
   line-height: inherit;
   margin: 0px 5px;
 }
 
-/* line 107, ../compass/sass/app.scss */
-.red {
-  background: #F0F;
-}
-
-/* line 111, ../compass/sass/app.scss */
-.blue {
-  background: #F00;
-}
-
 /*-------------------------------------------*\
 	$MENU
 /*-------------------------------------------*/
-/* line 118, ../compass/sass/app.scss */
+/* line 115, ../compass/sass/app.scss */
 .menu {
   float: left;
 }
-/* line 120, ../compass/sass/app.scss */
+/* line 117, ../compass/sass/app.scss */
 .menu a {
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 126, ../compass/sass/app.scss */
+/* line 123, ../compass/sass/app.scss */
 a.menu-profil {
   display: none;
 }
@@ -134,7 +130,7 @@ a.menu-profil {
 /*-------------------------------------------*\
 	$VIEW
 /*-------------------------------------------*/
-/* line 133, ../compass/sass/app.scss */
+/* line 130, ../compass/sass/app.scss */
 .view {
   overflow: hidden;
   position: absolute;
@@ -145,36 +141,38 @@ a.menu-profil {
 /*-------------------------------------------*\
 	$POST
 /*-------------------------------------------*/
-/* line 143, ../compass/sass/app.scss */
+/* line 140, ../compass/sass/app.scss */
 .post {
   background-color: #FFF;
   padding-top: 10px;
   position: relative;
+  margin: 5px 0px;
+  border: solid 1px #BEBEBE;
 }
-/* line 148, ../compass/sass/app.scss */
+/* line 147, ../compass/sass/app.scss */
 .post a {
   color: #2c3e50;
 }
-/* line 152, ../compass/sass/app.scss */
+/* line 151, ../compass/sass/app.scss */
 .post .panel-body {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 158, ../compass/sass/app.scss */
+/* line 157, ../compass/sass/app.scss */
 .post-avatar {
   width: 100%;
   max-width: 80px;
   margin-left: 7px;
 }
 
-/* line 164, ../compass/sass/app.scss */
+/* line 163, ../compass/sass/app.scss */
 .post-author {
   font-weight: bold;
   font-size: 1em;
 }
 
-/* line 169, ../compass/sass/app.scss */
+/* line 168, ../compass/sass/app.scss */
 .post-distance,
 .post-date {
   position: absolute;
@@ -184,47 +182,47 @@ a.menu-profil {
   color: #C5C5C5;
 }
 
-/* line 178, ../compass/sass/app.scss */
+/* line 177, ../compass/sass/app.scss */
 .post-descr {
   font-size: 0.8em;
 }
 
-/* line 182, ../compass/sass/app.scss */
+/* line 181, ../compass/sass/app.scss */
 .post-subtitle {
   font-size: 0.8em;
   color: #C5C5C5;
 }
 
-/* line 187, ../compass/sass/app.scss */
+/* line 186, ../compass/sass/app.scss */
 .post-foot {
-  background-color: #E8E8E8;
   margin-top: 7px;
   padding: 0;
+  border-top: dashed 1px #B2B2B2;
 }
 
-/* line 193, ../compass/sass/app.scss */
+/* line 192, ../compass/sass/app.scss */
 .post-foot-btn {
   text-align: center;
-  color: #FFF;
+  color: #6E6E6E;
   display: inline-block;
   padding: 10px 0px;
-  border-right: solid 1px #E8E8E8;
-  border-left: solid 1px #E8E8E8;
-  background-color: #C5C5C5;
+  /*border-right: solid 1px $grey-light;
+  border-left: solid 1px $grey-light;
+  background-color: $grey;*/
 }
 
-/* line 203, ../compass/sass/app.scss */
+/* line 202, ../compass/sass/app.scss */
 .post-foot-btn.active {
-  color: #FFF;
-  background-color: #18bc9c;
+  color: #18bc9c;
+  /*background-color: $green;*/
 }
 
-/* line 208, ../compass/sass/app.scss */
+/* line 207, ../compass/sass/app.scss */
 .post-foot-btn.active.red {
-  background-color: #F46E6E;
+  color: #F46E6E;
 }
 
-/* line 212, ../compass/sass/app.scss */
+/* line 211, ../compass/sass/app.scss */
 .post-foot-link {
   font-size: 0.8em;
   margin-right: 5px;
@@ -239,18 +237,18 @@ a.menu-profil {
   /*-----------------------*\
     $global
   /*-----------------------*/
-  /* line 231, ../compass/sass/app.scss */
+  /* line 230, ../compass/sass/app.scss */
   .app-container,
   .app-pusher {
     height: 100%;
   }
 
-  /* line 235, ../compass/sass/app.scss */
+  /* line 234, ../compass/sass/app.scss */
   .app-container {
     overflow: hidden;
   }
 
-  /* line 238, ../compass/sass/app.scss */
+  /* line 237, ../compass/sass/app.scss */
   .app-pusher {
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -262,7 +260,7 @@ a.menu-profil {
     transform: translateX(0px);
   }
 
-  /* line 242, ../compass/sass/app.scss */
+  /* line 241, ../compass/sass/app.scss */
   .app-content {
     position: absolute;
     top: 45px;
@@ -274,14 +272,14 @@ a.menu-profil {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* line 253, ../compass/sass/app.scss */
+  /* line 252, ../compass/sass/app.scss */
   .with-sidebar .app-pusher {
     -moz-transform: translateX(-230px);
     -ms-transform: translateX(-230px);
     -webkit-transform: translateX(-230px);
     transform: translateX(-230px);
   }
-  /* line 254, ../compass/sass/app.scss */
+  /* line 253, ../compass/sass/app.scss */
   .with-sidebar .app-cache {
     position: absolute;
     left: 0;
@@ -295,13 +293,13 @@ a.menu-profil {
   /*-----------------------*\
     $header
   /*-----------------------*/
-  /* line 267, ../compass/sass/app.scss */
+  /* line 266, ../compass/sass/app.scss */
   .header {
     position: static;
     height: 45px;
   }
 
-  /* line 271, ../compass/sass/app.scss */
+  /* line 270, ../compass/sass/app.scss */
   .header-icon {
     position: relative;
     display: block;
@@ -310,7 +308,7 @@ a.menu-profil {
     height: 45px;
     cursor: pointer;
   }
-  /* line 279, ../compass/sass/app.scss */
+  /* line 278, ../compass/sass/app.scss */
   .header-icon:after {
     content: '';
     position: absolute;
@@ -324,17 +322,17 @@ a.menu-profil {
     box-shadow: 0 0px 0 1px #FFF, 0 6px 0 1px #FFF, 0 12px 0 1px #FFF;
   }
 
-  /* line 290, ../compass/sass/app.scss */
+  /* line 289, ../compass/sass/app.scss */
   .header-logo {
     background-size: 33px;
   }
 
-  /* line 294, ../compass/sass/app.scss */
+  /* line 293, ../compass/sass/app.scss */
   .header-action-label {
     display: none;
   }
 
-  /* line 297, ../compass/sass/app.scss */
+  /* line 296, ../compass/sass/app.scss */
   .header-back {
     display: block;
   }
@@ -342,7 +340,7 @@ a.menu-profil {
   /*-----------------------*\
     $menu
   /*-----------------------*/
-  /* line 303, ../compass/sass/app.scss */
+  /* line 302, ../compass/sass/app.scss */
   .menu {
     position: absolute;
     right: 0;
@@ -355,7 +353,7 @@ a.menu-profil {
     -webkit-transform: translateX(230px);
     transform: translateX(230px);
   }
-  /* line 312, ../compass/sass/app.scss */
+  /* line 311, ../compass/sass/app.scss */
   .menu a {
     color: #494949;
     display: block;
@@ -365,38 +363,38 @@ a.menu-profil {
     margin: 0;
     border-bottom: solid 1px #E2E2E2;
   }
-  /* line 322, ../compass/sass/app.scss */
+  /* line 321, ../compass/sass/app.scss */
   .menu a span {
     margin-right: 34px;
   }
-  /* line 326, ../compass/sass/app.scss */
+  /* line 325, ../compass/sass/app.scss */
   .menu a.active,
   .menu a:hover {
     color: #494949;
     background-color: #E8E8E8;
   }
 
-  /* line 333, ../compass/sass/app.scss */
+  /* line 332, ../compass/sass/app.scss */
   .menu-profil {
     min-height: 60px;
     overflow: hidden;
     display: block;
     background-color: #E8E8E8;
   }
-  /* line 339, ../compass/sass/app.scss */
+  /* line 338, ../compass/sass/app.scss */
   .menu-profil img {
     width: 40px;
     float: left;
     margin: 10px 5px;
   }
-  /* line 344, ../compass/sass/app.scss */
+  /* line 343, ../compass/sass/app.scss */
   .menu-profil span {
     width: 125px;
     font-size: 12px;
     margin: 10px 0px 5px 0px;
   }
 
-  /* line 351, ../compass/sass/app.scss */
+  /* line 350, ../compass/sass/app.scss */
   .menu-profil-name {
     float: left;
     font-weight: bold;
@@ -406,7 +404,7 @@ a.menu-profil {
   /*-----------------------*\
     $view
   /*-----------------------*/
-  /* line 361, ../compass/sass/app.scss */
+  /* line 360, ../compass/sass/app.scss */
   .view {
     top: 0;
   }

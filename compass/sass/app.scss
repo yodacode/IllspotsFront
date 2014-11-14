@@ -18,7 +18,7 @@ $menu-width:230px!default;
 /*-------------------------------------------*/
 
 body {
-	background-color: #444444;
+	background-color: #D7D7D7;
 }
 .app-content {
 	padding-top: 66px;
@@ -33,6 +33,11 @@ body {
 
 .regular-border {
 	border-radius: 0px;
+}
+
+.container {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /*-------------------------------------------*\
@@ -104,14 +109,6 @@ body {
 	}
 }
 
-.red {
-	background: #F0F;
-}
-
-.blue {
-	background: #F00;
-}
-
 /*-------------------------------------------*\
 	$MENU
 /*-------------------------------------------*/
@@ -144,6 +141,8 @@ a.menu-profil {
 	background-color: #FFF;
 	padding-top: 10px;
 	position: relative;
+	margin: 5px 0px;
+	border: solid 1px #BEBEBE;
 
 	a {
 		color: $blue;
@@ -185,28 +184,28 @@ a.menu-profil {
 	}
 
 	.post-foot {
-		background-color: $grey-light;
 		margin-top: 7px;
 		padding: 0;
+		border-top: dashed 1px #B2B2B2;
 	}
 
 		.post-foot-btn {
 			text-align: center;
-			color: #FFF;
+			color: #6E6E6E;
 			display: inline-block;
 			padding: 10px 0px;
-			border-right: solid 1px $grey-light;
+			/*border-right: solid 1px $grey-light;
 			border-left: solid 1px $grey-light;
-			background-color: $grey;
+			background-color: $grey;*/
 		}
 
 		.post-foot-btn.active {
-			color: #FFF;
-			background-color: $green;
+			color: $green;
+			/*background-color: $green;*/
 		}
 
 		.post-foot-btn.active.red {
-			background-color: $red;
+			color: $red;
 		}
 
 		.post-foot-link {
