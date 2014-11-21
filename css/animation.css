@@ -49,3 +49,17 @@
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
+
+/* line 32, ../compass/sass/animation.scss */
+.zoom.ng-enter {
+  -moz-animation-name: zoomIn;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+/* line 36, ../compass/sass/animation.scss */
+.zoom.ng-leave {
+  -moz-animation-name: zoomOut;
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}

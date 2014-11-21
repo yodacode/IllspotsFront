@@ -8,6 +8,11 @@ placeControllers.controller('PlaceListCtrl', ['$scope', 'Menu', function ($scope
 	Menu.setIcon('glyphicon glyphicon-map-marker');
 	Menu.setUrl('#/spot/');
 
+	$scope.filter = false;
+	$scope.setFilter = function (filter) {
+		$scope.filter = filter;
+	}
+
 	$scope.places = [
 	    {
             id: 1,

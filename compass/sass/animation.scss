@@ -9,7 +9,7 @@
 }
 
 .right.ng-leave {
-	@include animation-name(fadeOutLeft);	
+	@include animation-name(fadeOutLeft);
 }
 
 .left.ng-enter {
@@ -17,7 +17,7 @@
 }
 
 .left.ng-leave {
-	@include animation-name(fadeOutRight);	
+	@include animation-name(fadeOutRight);
 }
 
 .bouncer.ng-enter {
@@ -26,5 +26,14 @@
 
 .bouncer.ng-leave {
 	@include animation-name(fadeOut);
+}
+
+
+.zoom.ng-enter {
+	@include animation-name(zoomIn);
+}
+
+.zoom.ng-leave {
+	@include animation-name(zoomOut);
 }
 

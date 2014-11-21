@@ -62,4 +62,13 @@
 		</div>
 	</div>
 
+	<button class="btn btn-sccess slider-btn" ng-click="setFilter(true)"><span class="glyphicon glyphicon-plus-sign"></span> Filter</button>
+	<div class="slider zoom" ng-if="filter">
+		<div class="container"></div>
+		<div class="container slider-container">
+			<a class="slider-btn-close" ng-click="setFilter(false)"><span class="glyphicon glyphicon-remove"></span></a>
+			<h4>Filter</h4>
+		</div>
+	</div>
 </div>
+
