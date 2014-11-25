@@ -1,4 +1,4 @@
-<div class="container" ng-controller="PlaceListCtrl">
+<div class="container scrolly" ng-controller="PlaceListCtrl">
 	<div class="search row">
 
 		<div class="input-group">
@@ -10,7 +10,15 @@
 
 	</div>
 
-	<h5>Autour de moi</h5>
+	<div class="containter overflow">
+
+		<h5 class="pull-left">Autour de moi</h5>
+		<div class="pull-right">
+			<button class="btn btn-sccess btn-xs popup-btn" ng-click="setFilter(true)">
+				<span class="glyphicon glyphicon-plus-sign"></span> Filter
+			</button>
+		</div>
+	</div>
 	<div ng-repeat="place in places" class="post row">
 		<div class="col-xs-2 no-padding">
 			<img src="img/skatepark.png" alt="profil" class="img-rounded post-avatar">
@@ -62,11 +70,10 @@
 		</div>
 	</div>
 
-	<button class="btn btn-sccess slider-btn" ng-click="setFilter(true)"><span class="glyphicon glyphicon-plus-sign"></span> Filter</button>
-	<div class="slider zoom" ng-if="filter">
+	<div class="popup zoom" ng-if="filter">
 		<div class="container"></div>
-		<div class="container slider-container">
-			<a class="slider-btn-close" ng-click="setFilter(false)"><span class="glyphicon glyphicon-remove"></span></a>
+		<div class="container popup-container">
+			<a class="popup-btn-close" ng-click="setFilter(false)"><span class="glyphicon glyphicon-remove"></span></a>
 			<h4>Filter</h4>
 		</div>
 	</div>
