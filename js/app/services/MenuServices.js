@@ -8,6 +8,9 @@ menuServices.factory('Menu', [function () {
         url  = '#/'
 
     var factory = {
+
+        isOpen: false,
+
         getText: function() {
             return text;
         },
@@ -31,6 +34,18 @@ menuServices.factory('Menu', [function () {
         setUrl: function (newUrl) {
             url = newUrl;
         },
+
+        toggle: function () {
+            this.isOpen = this.isOpen ? this.isOpen = false : true;
+        },
+
+        open: function () {
+            this.isOpen = true;
+        },
+
+        close: function () {
+            this.isOpen = false;
+        }
 
 
     };

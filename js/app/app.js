@@ -32,9 +32,11 @@ IllspotsApp.config(['$routeProvider',
 
 
 IllspotsApp.directive('scrolly', function () {
+
     return function (scope, element, attrs) {
+
         var raw = element[0];
-        console.log('loading directive', this);
+
         element.bind('scroll', function () {
             if (raw.scrollTop > 50) {
                 scope.slideshowSize = 'small';
@@ -42,9 +44,9 @@ IllspotsApp.directive('scrolly', function () {
                 scope.slideshowSize = 'big';
             }
             scope.$apply();
-            console.log('in scroll', raw.scrollTop);
         });
     };
+
 });
 
 
@@ -55,11 +57,11 @@ IllspotsApp.controller('AppCtrl', ['$rootScope', '$scope', '$window', 'Menu', fu
     $rootScope.slide = '';
     $rootScope.$on('$routeChangeSuccess', function() {
 
-    if ($window.location.hash == '#/' || $window.location.hash == '') {
-	   $rootScope.btnBack = false;
-	} else {
-		$rootScope.btnBack = true;
-	}
+        if ($window.location.hash == '#/' || $window.location.hash == '') {
+            $rootScope.btnBack = false;
+        } else {
+            $rootScope.btnBack = true;
+        }
 
         //event button to move backward
         $rootScope.back = function() {
