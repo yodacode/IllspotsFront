@@ -271,13 +271,13 @@ a.menu-profil {
 }
 
 .slideshow.small {
-	max-height: 80px;
+	max-height: 55px;
 }
 
 
 
 /*-------------------------------------------*\
-	$
+	$HEADING
 /*-------------------------------------------*/
 
 .heading {
@@ -285,6 +285,19 @@ a.menu-profil {
 	height: 75px;
 	margin-top: -10px;
 	margin-bottom: 15px;
+
+	.title {
+		position: absolute;
+		top: -45px;
+		height: 55px;
+		z-index: 1;
+		width: 100%;
+		text-align: center;
+		line-height: 18px;
+		color: #FFF;
+		background-color: rgba(0, 0, 0, 0.4);
+		padding-top: 7px;
+	}
 
 	.badge {
 		background-color: $green;
@@ -294,6 +307,7 @@ a.menu-profil {
 		font-size: 1em;
 		line-height: 2.5em;
 		position: absolute;
+		z-index: 2;
 	    left: 0;
 	    right: 0;
 	    margin: auto;

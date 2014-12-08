@@ -31,25 +31,6 @@ IllspotsApp.config(['$routeProvider',
 }]);
 
 
-IllspotsApp.directive('scrolly', function () {
-
-    return function (scope, element, attrs) {
-
-        var raw = element[0];
-
-        element.bind('scroll', function () {
-            if (raw.scrollTop > 50) {
-                scope.slideshowSize = 'small';
-            } else {
-                scope.slideshowSize = 'big';
-            }
-            scope.$apply();
-        });
-    };
-
-});
-
-
 IllspotsApp.controller('AppCtrl', ['$rootScope', '$scope', '$window', 'Menu', function ($rootScope, $scope, $window, Menu) {
 
 	$scope.Menu = Menu;

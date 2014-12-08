@@ -292,11 +292,11 @@ a.menu-profil {
 
 /* line 273, ../compass/sass/app.scss */
 .slideshow.small {
-  max-height: 80px;
+  max-height: 55px;
 }
 
 /*-------------------------------------------*\
-	$
+	$HEADING
 /*-------------------------------------------*/
 /* line 283, ../compass/sass/app.scss */
 .heading {
@@ -306,6 +306,19 @@ a.menu-profil {
   margin-bottom: 15px;
 }
 /* line 289, ../compass/sass/app.scss */
+.heading .title {
+  position: absolute;
+  top: -45px;
+  height: 55px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  line-height: 18px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 7px;
+}
+/* line 302, ../compass/sass/app.scss */
 .heading .badge {
   background-color: #18bc9c;
   width: 50px;
@@ -316,12 +329,13 @@ a.menu-profil {
   font-size: 1em;
   line-height: 2.5em;
   position: absolute;
+  z-index: 2;
   left: 0;
   right: 0;
   margin: auto;
   border: solid 3px #FFF;
 }
-/* line 303, ../compass/sass/app.scss */
+/* line 317, ../compass/sass/app.scss */
 .heading .rating {
   width: 120px;
   height: 21px;
@@ -331,7 +345,7 @@ a.menu-profil {
   bottom: 0px;
   margin: auto;
 }
-/* line 313, ../compass/sass/app.scss */
+/* line 327, ../compass/sass/app.scss */
 .heading .liking {
   color: #F46E6E;
   position: absolute;
@@ -339,7 +353,7 @@ a.menu-profil {
   top: 15px;
   font-size: 1.5em;
 }
-/* line 321, ../compass/sass/app.scss */
+/* line 335, ../compass/sass/app.scss */
 .heading .checking {
   color: #18bc9c;
   position: absolute;
@@ -355,18 +369,18 @@ a.menu-profil {
   /*-----------------------*\
     $global
   /*-----------------------*/
-  /* line 341, ../compass/sass/app.scss */
+  /* line 355, ../compass/sass/app.scss */
   .app-container,
   .app-pusher {
     height: 100%;
   }
 
-  /* line 345, ../compass/sass/app.scss */
+  /* line 359, ../compass/sass/app.scss */
   .app-container {
     overflow: hidden;
   }
 
-  /* line 348, ../compass/sass/app.scss */
+  /* line 362, ../compass/sass/app.scss */
   .app-pusher {
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -378,7 +392,7 @@ a.menu-profil {
     transform: translateX(0px);
   }
 
-  /* line 352, ../compass/sass/app.scss */
+  /* line 366, ../compass/sass/app.scss */
   .app-content {
     position: absolute;
     top: 45px;
@@ -390,14 +404,14 @@ a.menu-profil {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* line 363, ../compass/sass/app.scss */
+  /* line 377, ../compass/sass/app.scss */
   .with-sidebar .app-pusher {
     -moz-transform: translateX(-230px);
     -ms-transform: translateX(-230px);
     -webkit-transform: translateX(-230px);
     transform: translateX(-230px);
   }
-  /* line 364, ../compass/sass/app.scss */
+  /* line 378, ../compass/sass/app.scss */
   .with-sidebar .app-cache {
     position: absolute;
     left: 0;
@@ -412,13 +426,13 @@ a.menu-profil {
   /*-----------------------*\
     $header
   /*-----------------------*/
-  /* line 378, ../compass/sass/app.scss */
+  /* line 392, ../compass/sass/app.scss */
   .header {
     position: static;
     height: 45px;
   }
 
-  /* line 382, ../compass/sass/app.scss */
+  /* line 396, ../compass/sass/app.scss */
   .header-icon {
     position: relative;
     display: block;
@@ -427,7 +441,7 @@ a.menu-profil {
     height: 45px;
     cursor: pointer;
   }
-  /* line 390, ../compass/sass/app.scss */
+  /* line 404, ../compass/sass/app.scss */
   .header-icon:after {
     content: '';
     position: absolute;
@@ -441,17 +455,17 @@ a.menu-profil {
     box-shadow: 0 0px 0 1px #FFF, 0 6px 0 1px #FFF, 0 12px 0 1px #FFF;
   }
 
-  /* line 401, ../compass/sass/app.scss */
+  /* line 415, ../compass/sass/app.scss */
   .header-logo {
     background-size: 33px;
   }
 
-  /* line 405, ../compass/sass/app.scss */
+  /* line 419, ../compass/sass/app.scss */
   .header-action-label {
     display: none;
   }
 
-  /* line 408, ../compass/sass/app.scss */
+  /* line 422, ../compass/sass/app.scss */
   .header-back {
     display: block;
   }
@@ -459,7 +473,7 @@ a.menu-profil {
   /*-----------------------*\
     $menu
   /*-----------------------*/
-  /* line 414, ../compass/sass/app.scss */
+  /* line 428, ../compass/sass/app.scss */
   .menu {
     position: absolute;
     right: 0;
@@ -472,7 +486,7 @@ a.menu-profil {
     -webkit-transform: translateX(230px);
     transform: translateX(230px);
   }
-  /* line 423, ../compass/sass/app.scss */
+  /* line 437, ../compass/sass/app.scss */
   .menu a {
     color: #494949;
     display: block;
@@ -482,38 +496,38 @@ a.menu-profil {
     margin: 0;
     border-bottom: solid 1px #E2E2E2;
   }
-  /* line 433, ../compass/sass/app.scss */
+  /* line 447, ../compass/sass/app.scss */
   .menu a span {
     margin-right: 34px;
   }
-  /* line 437, ../compass/sass/app.scss */
+  /* line 451, ../compass/sass/app.scss */
   .menu a.active,
   .menu a:hover {
     color: #494949;
     background-color: #E8E8E8;
   }
 
-  /* line 444, ../compass/sass/app.scss */
+  /* line 458, ../compass/sass/app.scss */
   .menu-profil {
     min-height: 60px;
     overflow: hidden;
     display: block;
     background-color: #E8E8E8;
   }
-  /* line 450, ../compass/sass/app.scss */
+  /* line 464, ../compass/sass/app.scss */
   .menu-profil img {
     width: 40px;
     float: left;
     margin: 10px 5px;
   }
-  /* line 455, ../compass/sass/app.scss */
+  /* line 469, ../compass/sass/app.scss */
   .menu-profil span {
     width: 125px;
     font-size: 12px;
     margin: 10px 0px 5px 0px;
   }
 
-  /* line 462, ../compass/sass/app.scss */
+  /* line 476, ../compass/sass/app.scss */
   .menu-profil-name {
     float: left;
     font-weight: bold;
@@ -523,7 +537,7 @@ a.menu-profil {
   /*-----------------------*\
     $view
   /*-----------------------*/
-  /* line 472, ../compass/sass/app.scss */
+  /* line 486, ../compass/sass/app.scss */
   .view {
     top: 0;
   }

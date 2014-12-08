@@ -47,7 +47,6 @@ menuServices.factory('Menu', [function () {
             this.isOpen = false;
         }
 
-
     };
 
 	return factory;
